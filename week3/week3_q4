@@ -1,0 +1,29 @@
+from mpl_toolkits.basemap import Basemap
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import style
+
+m = Basemap(projection='mill')
+
+# -- 해안선 표기
+m.drawcoastlines()
+plt.show()
+
+# -- 국경선 표기
+m.drawcoastlines()
+m.drawcountries()
+plt.show()
+
+# -- 지도 설정(형태:robin, 중심:동경 130)
+m = Basemap(projection='robin', resolution='I', area_thresh=1000.0, lat_0=0, lon_0=-130)
+m.drawcoastlines()
+m.drawcountries()
+m.fillcontinents(color='gray')  # 대륙색상
+m.drawmapboundary()
+m.drawmeridians(np.arange(0, 360, 30))  # 위도/경도를 30도 간격으로 그림
+m.drawparallels(np.arange(-90, 90, 30))
+plt.show()
+
+
+
+

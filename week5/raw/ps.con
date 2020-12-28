@@ -1,0 +1,12 @@
+---------1---------2---------3---------4---------5---------6---------7
+input filename(a12)                     pus9802.dat
+output filename(a12)                    pus9802_out.dat
+input data format(a30)                  (10x,f10.4)
+# of raw data(i8)                       10000
+# of lag(i8)                            1000
+raw data interval in hour(f8.5)         1.0
+scaling factor(f10.5)                   1.
+SELECT WINDOW; 1.Hanning  2.Parzen      1
+DO YOU WANT TO WRITE COV.?  1.YES 2.NO  1
+filename of detrended data(a12)         dX1.dat
+filename of window output(a12)          wX.dat
